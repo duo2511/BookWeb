@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Book-detail</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script type="text/javascript" th:src="@{/js/validation.js}"></script>
+<link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" th:href="@{/user-book-home/{iduser} (iduser=${user.username})}">LIBRARY</a>
+
+
+			<form class="container col-4">
+				<input type="text" th:value="'Xin chào '+ ${user.name}" disabled>
+			</form>
+
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row container">
+			<h1 class="container col-4">Book Order</h1>
+		</div>
+
+		<!-- @{/book/save/{id}(id=${book.id})} -->
+		<form th:object="${order}"
+			th:action="@{/add-order-book/{username} (username=${user.username})}"
+			th:method="POST" class="container col-4 shadow order-box  needs-validation"
+			novalidate>
+
+
+			<div class="col input">
+				Title : <span th:text="${book.title}"></span> <input type="hidden"
+					name="title" th:value="${book.title}"
+					class="form-control container"><br />
+			</div>
+
+			<div class="col input">
+				Customer: <span th:text="${user.username} "></span> <input
+					type="hidden" name="orderuser" th:value="${user.username}"
+					class="form-control container"><br />
+
+			</div>
+			<div class="input img-order">
+				<img style="max-width: 200px"
+					th:src="@{http://localhost:8080/book-img?id={id1} (id1=${book.id})}">
+			</div>
+			<div class="col input">
+				Book Price :<span th:text="${book.price}+' VND'"></span> <br />
+
+			</div>
+			<div class="col">
+				Amount:<input type="number" name="amount"
+					class="form-control container" required="required"><br />
+				<div th:if="${invalid}" style="color: red">Amount can't be
+					equal or less than 0</div>
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback">Please fill out this field.</div>
+			</div>
+
+			<input type="submit" value="Order book"
+				class="btn btn-success button">
+		</form>
+	</div>
+</body>
+</html>
+
+

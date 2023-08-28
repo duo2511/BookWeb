@@ -1,0 +1,155 @@
+body {
+	background-color: #fff;
+}
+
+.shadow {
+	box-shadow: 10px 10px 10px #aaaaaa;
+	border: 2px solid grey;
+}
+
+.addtxt {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 13px;
+	width: 350px;
+	background-color: #e5e8ed;
+	font-weight: 500;
+}
+
+.second {
+	width: 350px;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#text1 {
+	font-size: 15px;
+	font-weight: 500;
+	color: black;
+}
+
+#text {
+	font-size: 18px;
+	font-weight: 900;
+	color: blue;
+}
+
+.text3 {
+	font-size: 13px;
+	font-weight: 500;
+	padding-left: 100px;
+	color: #778d72;
+}
+
+.text3o {
+	color: #00a5f4;
+}
+
+.text4 {
+	font-size: 13px;
+	font-weight: 500;
+	color: #828386;
+}
+
+.text4i {
+	color: #00a5f4;
+}
+
+.text4o {
+	color: white;
+}
+
+.thumbup {
+	font-size: 13px;
+	font-weight: 500;
+	margin-right: 5px;
+}
+
+.thumbupo {
+	color: #17a2b8;
+}
+
+.input {
+	padding: 3%;
+	margin: 2%
+}
+
+.button {
+	margin-left: 40%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+.img-order {
+	margin-left: 15%;
+}
+
+* {
+	font-family: Courier new;
+}
+
+label {
+	font-weight: 700;
+}
+
+body {
+	background-image: url("https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80");
+	/* Center and scale the image nicely */ background-repeat : no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.title {
+	margin-left: 50%;
+}
+/* user-book-view*/
+.book-box {
+	margin-top: 5%;
+	width: 100%;
+	float: left;
+}
+
+.info-book-box {
+	margin-left: 20%;
+	float: left;
+}
+
+.img-book-box {
+	padding-left: 5%;
+	float: right;
+}
+
+/*comment box*/
+.comment-box {
+	margin-left: 30%;
+	background-color : #8FBC8F;
+	width: 40%;
+	float: left;
+}
+
+.write-comment-box {
+	margin-top: 5%;
+	margin-left: 16%;
+	float: left;
+}
+
+.list-comment-box {
+	margin-top: 5%;
+	margin-left: 20%;
+	float: left;
+}
+
+.review-box {
+	margin-top: 5%;
+}
+
+.text-comment-box {
+	float:left;
+	color: white;
+}
+/* order book*/
+.order-box {
+	background-color: white;
+}
